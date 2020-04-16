@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var books: [Book] = []
         do {
           books = try context.fetch(Book.fetchRequest())
-        } catch let error as NSError {
+        } catch {
           print("Could not Fetch.")
         }
         
@@ -36,12 +36,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         book.image = viewModel?.apiBooksToDisplay[indexPath!.row].image?.pngData()
         book.title = viewModel?.apiBooksToDisplay[indexPath!.row].title
         
-        if (heart.currentImage == UIImage(named: "heart.jpg")) {
+        if heart.currentImage == UIImage(named: "heart.jpg") {
           
           appDelegate.saveContext()
           favourites.append(book)
-          
-          print(favourites.count)
         
           heart.setImage(UIImage(named: "heart2.png"), for: .normal)
         } else {
@@ -54,7 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
           
           for index in 0..<favourites.count {
             print(index)
-            if ((favourites[index].author == book.author) && (favourites[index].desc == book.desc) && (favourites[index].title == book.title)) {
+            if favourites[index].author == book.author && favourites[index].desc == book.desc && favourites[index].title == book.title {
               favourites.remove(at: index)
               break
             }
@@ -62,7 +60,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
           
           context.delete(book)
           appDelegate.saveContext()
-          print(favourites.count)
           heart.setImage(UIImage(named: "heart.jpg"), for: .normal)
         }
         
@@ -143,17 +140,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       myImageView.image = viewModel?.apiBooksToDisplay[indexPath.row].image ?? UIImage(named: "heart.png")
     }
     return cell
-    /*
-    let task = URLSession.shared.dataTask(with: jsonURL!, completionHandler: { (data, response, error) in
-      let json: JSON = JSON(data)
-      self.viewModel?.parseJSON(apiResults: json)
-      
-      DispatchQueue.main.async {
-        self.searchTableView.reloadData()
-      }
-    })
-    task.resume()
-    */
     
   }
   
@@ -198,15 +184,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if (segue.identifier == "favouriteSegue") {
+    if segue.identifier == "favouriteSegue" {
       let dest = segue.destination as! FavouritesViewController
       dest.favouriteBooks = favourites
     }
     
-    if (segue.identifier == "displaySegue") {
+    if segue.identifier == "displaySegue" {
       let dest = segue.destination as! DetailViewController
       if let cell = sender as? UITableViewCell {
-        
+        let indexPath = searchTableView.indexPath(for: cell)!
+        dest.author = viewModel?.apiBooksToDisplay[indexPath.row].authors[0]
+        dest.myTitle = viewModel?.apiBooksToDisplay[indexPath.row].title
+        dest.desc = viewModel?.apiBooksToDisplay[indexPath.row].description
+        dest.imageToDisplay = viewModel?.apiBooksToDisplay[indexPath.row].image
       }
     }
   }
