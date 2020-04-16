@@ -45,7 +45,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" tag="2000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVW-g4-YBZ">
+                                                <button opaque="NO" tag="2000" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVW-g4-YBZ">
                                                     <rect key="frame" x="340" y="28" width="54" height="50"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" button="YES" image="YES"/>
@@ -101,7 +101,7 @@
                             <constraint firstItem="cvk-4M-NAi" firstAttribute="leading" secondItem="eFa-II-hg6" secondAttribute="leading" id="aNc-fs-Mwx"/>
                             <constraint firstItem="cvk-4M-NAi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c1g-Ij-PrC"/>
                             <constraint firstItem="cvk-4M-NAi" firstAttribute="trailing" secondItem="eFa-II-hg6" secondAttribute="trailing" id="cbU-zk-pBq"/>
-                            <constraint firstItem="eFa-II-hg6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uAA-Gq-wFa"/>
+                            <constraint firstItem="eFa-II-hg6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uAA-Gq-wFa"/>
                             <constraint firstItem="cvk-4M-NAi" firstAttribute="top" secondItem="eFa-II-hg6" secondAttribute="bottom" id="yAP-sU-qRL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -175,7 +175,8 @@
                             <constraint firstItem="PAy-BW-Q8g" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" id="9oP-Av-yV4"/>
                             <constraint firstItem="fFL-5K-Vh7" firstAttribute="top" secondItem="PAy-BW-Q8g" secondAttribute="bottom" constant="41" id="H2W-s8-R4q"/>
                             <constraint firstItem="bua-52-8kz" firstAttribute="top" secondItem="eOi-eT-bWk" secondAttribute="bottom" constant="45" id="MCk-mW-9vX"/>
-                            <constraint firstItem="75L-bE-dAZ" firstAttribute="bottom" secondItem="bua-52-8kz" secondAttribute="bottom" constant="41" id="VLg-qh-Nlb"/>
+                            <constraint firstItem="qY1-tH-zQa" firstAttribute="top" secondItem="75L-bE-dAZ" secondAttribute="top" constant="20" id="SaX-4S-mPr"/>
+                            <constraint firstItem="75L-bE-dAZ" firstAttribute="bottom" secondItem="bua-52-8kz" secondAttribute="bottom" priority="250" constant="41" id="VLg-qh-Nlb"/>
                             <constraint firstItem="eOi-eT-bWk" firstAttribute="top" secondItem="fFL-5K-Vh7" secondAttribute="bottom" constant="45" id="asY-zb-pP5"/>
                             <constraint firstItem="eOi-eT-bWk" firstAttribute="top" secondItem="fFL-5K-Vh7" secondAttribute="bottom" constant="45" id="gJN-Fw-9lk"/>
                             <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" secondItem="fFL-5K-Vh7" secondAttribute="trailing" constant="20" id="gwD-gq-9dX"/>
@@ -234,7 +235,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" tag="2000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWo-Tq-I6v">
+                                        <button opaque="NO" tag="2000" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWo-Tq-I6v">
                                             <rect key="frame" x="340" y="28" width="54" height="50"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" button="YES" image="YES"/>
@@ -308,6 +309,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="05K-es-U89"/>
+        <segue reference="L5x-fO-adB"/>
     </inferredMetricsTieBreakers>
 </document>

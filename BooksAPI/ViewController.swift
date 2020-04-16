@@ -91,6 +91,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     } catch let error as NSError {
       print("Could not fetch. \(error)")
     }
+    searchTableView.reloadData()
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
