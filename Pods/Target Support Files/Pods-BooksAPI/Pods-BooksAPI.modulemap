@@ -1,0 +1,6 @@
+framework module Pods_BooksAPI {
+  umbrella header "Pods-BooksAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}
