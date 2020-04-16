@@ -144,7 +144,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
   
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-    //TODO: loading wheel
     viewModel?.reset()
     
     let suffixString = viewModel!.modifySearchInput(searchString: searchBar.searchTextField.text ?? "")
@@ -162,9 +161,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
           var imageTask = URLSession.shared.dataTask(with: theURL, completionHandler: { (data, response, error) in
             if let imageData = data {
               self.viewModel!.apiBooksToDisplay[index].image = UIImage(data: imageData)
-              //print(self.viewModel!.apiBooksToDisplay[index].image?.size.width)
             }
-            //print("TEST")
             
             DispatchQueue.main.async {
               self.searchTableView.reloadData()

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1929692448B24E00280A93 /* BooksAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1929682448B24E00280A93 /* BooksAPITests.swift */; };
+		3A1929712448C92700280A93 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1929702448C92700280A93 /* SwiftyJSON.framework */; };
+		3A1929732448C92F00280A93 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1929722448C92F00280A93 /* NVActivityIndicatorView.framework */; };
 		3A3D857F2446518E00F383D6 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D857E2446518E00F383D6 /* heart.png */; };
 		3A3D858B2446615400F383D6 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D85892446615400F383D6 /* Book+CoreDataProperties.swift */; };
 		3A3D858C2446615400F383D6 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D858A2446615400F383D6 /* Book+CoreDataClass.swift */; };
@@ -25,8 +28,23 @@
 		F90F9BFFBA2FA80E2282A259 /* Pods_BooksAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D540D34567F5E10C8689FB /* Pods_BooksAPI.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3A19296B2448B24F00280A93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AB841782445418500F91802 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AB8417F2445418500F91802;
+			remoteInfo = BooksAPI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		26DC99A4BAA677B13D7DCCB6 /* Pods-BooksAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BooksAPI.debug.xcconfig"; path = "Target Support Files/Pods-BooksAPI/Pods-BooksAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		3A1929662448B24E00280A93 /* BooksAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BooksAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1929682448B24E00280A93 /* BooksAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPITests.swift; sourceTree = "<group>"; };
+		3A19296A2448B24F00280A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A1929702448C92700280A93 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1929722448C92F00280A93 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A3D857E2446518E00F383D6 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		3A3D85892446615400F383D6 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3A3D858A2446615400F383D6 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -49,10 +67,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3A1929632448B24E00280A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3AB8417D2445418500F91802 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1929732448C92F00280A93 /* NVActivityIndicatorView.framework in Frameworks */,
+				3A1929712448C92700280A93 /* SwiftyJSON.framework in Frameworks */,
 				F90F9BFFBA2FA80E2282A259 /* Pods_BooksAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1929672448B24E00280A93 /* BooksAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A1929682448B24E00280A93 /* BooksAPITests.swift */,
+				3A19296A2448B24F00280A93 /* Info.plist */,
+			);
+			path = BooksAPITests;
+			sourceTree = "<group>";
+		};
 		3A3D8580244660CE00F383D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB841822445418500F91802 /* BooksAPI */,
+				3A1929672448B24E00280A93 /* BooksAPITests */,
 				3AB841812445418500F91802 /* Products */,
 				D46863CF6C76E920AD381E43 /* Pods */,
 				66D8500DD2CA7F9824FEB5C0 /* Frameworks */,
@@ -84,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB841802445418500F91802 /* BooksAPI.app */,
+				3A1929662448B24E00280A93 /* BooksAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +166,8 @@
 		66D8500DD2CA7F9824FEB5C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A1929722448C92F00280A93 /* NVActivityIndicatorView.framework */,
+				3A1929702448C92700280A93 /* SwiftyJSON.framework */,
 				F7D540D34567F5E10C8689FB /* Pods_BooksAPI.framework */,
 			);
 			name = Frameworks;
@@ -145,6 +185,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3A1929652448B24E00280A93 /* BooksAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A19296F2448B24F00280A93 /* Build configuration list for PBXNativeTarget "BooksAPITests" */;
+			buildPhases = (
+				3A1929622448B24E00280A93 /* Sources */,
+				3A1929632448B24E00280A93 /* Frameworks */,
+				3A1929642448B24E00280A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A19296C2448B24F00280A93 /* PBXTargetDependency */,
+			);
+			name = BooksAPITests;
+			productName = BooksAPITests;
+			productReference = 3A1929662448B24E00280A93 /* BooksAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3AB8417F2445418500F91802 /* BooksAPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AB841972445418900F91802 /* Build configuration list for PBXNativeTarget "BooksAPI" */;
@@ -175,6 +233,10 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Field Employee";
 				TargetAttributes = {
+					3A1929652448B24E00280A93 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 3AB8417F2445418500F91802;
+					};
 					3AB8417F2445418500F91802 = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -194,11 +256,19 @@
 			projectRoot = "";
 			targets = (
 				3AB8417F2445418500F91802 /* BooksAPI */,
+				3A1929652448B24E00280A93 /* BooksAPITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3A1929642448B24E00280A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3AB8417E2445418500F91802 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +343,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A1929622448B24E00280A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1929692448B24E00280A93 /* BooksAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3AB8417C2445418500F91802 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +369,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A19296C2448B24F00280A93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AB8417F2445418500F91802 /* BooksAPI */;
+			targetProxy = 3A19296B2448B24F00280A93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3AB841892445418600F91802 /* Main.storyboard */ = {
@@ -312,6 +398,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3A19296D2448B24F00280A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BooksAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iprogrammers.com.BooksAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BooksAPI.app/BooksAPI";
+			};
+			name = Debug;
+		};
+		3A19296E2448B24F00280A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BooksAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iprogrammers.com.BooksAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BooksAPI.app/BooksAPI";
+			};
+			name = Release;
+		};
 		3AB841952445418900F91802 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,6 +589,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3A19296F2448B24F00280A93 /* Build configuration list for PBXNativeTarget "BooksAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A19296D2448B24F00280A93 /* Debug */,
+				3A19296E2448B24F00280A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3AB8417B2445418500F91802 /* Build configuration list for PBXProject "BooksAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
