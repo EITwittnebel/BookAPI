@@ -51,7 +51,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
           }
           
           for index in 0..<favourites.count {
-            print(index)
             if favourites[index].author == book.author && favourites[index].desc == book.desc && favourites[index].title == book.title {
               favourites.remove(at: index)
               break
