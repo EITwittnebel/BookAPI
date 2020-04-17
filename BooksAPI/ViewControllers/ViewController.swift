@@ -148,7 +148,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let suffixString = viewModel!.modifySearchInput(searchString: searchBar.searchTextField.text ?? "")
     let prefixString = "https://www.googleapis.com/books/v1/volumes?q="
-    let jsonURL = URL(string: prefixString + suffixString)
+    let jsonURL = URL(string: prefixString + suffixString + "&maxResults=30")
     
     let task = URLSession.shared.dataTask(with: jsonURL!, completionHandler: { (data, response, error) in
       let json: JSON = JSON(data)
