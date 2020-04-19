@@ -127,7 +127,7 @@
         <scene sceneID="iY6-Qm-d51">
             <objects>
                 <viewController id="Nyg-Zn-IXl" customClass="DetailViewController" customModule="BooksAPI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="oti-OC-XEW">
+                    <scrollView key="view" contentMode="scaleToFill" id="oti-OC-XEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -139,14 +139,18 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFL-5K-Vh7">
                                 <rect key="frame" x="26" y="516" width="368" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="368" id="PiO-JC-RDb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bua-52-8kz">
-                                <rect key="frame" x="26" y="647" width="368" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bua-52-8kz">
+                                <rect key="frame" x="26" y="647" width="368" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="4GW-l9-UEY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="120" id="4GW-l9-UEY"/>
+                                    <constraint firstAttribute="width" constant="368" id="Vnn-mU-08a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -172,28 +176,33 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" secondItem="bua-52-8kz" secondAttribute="trailing" constant="20" id="7Dn-Kt-Mcs"/>
-                            <constraint firstItem="PAy-BW-Q8g" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" id="9oP-Av-yV4"/>
-                            <constraint firstItem="fFL-5K-Vh7" firstAttribute="top" secondItem="PAy-BW-Q8g" secondAttribute="bottom" constant="41" id="H2W-s8-R4q"/>
-                            <constraint firstItem="bua-52-8kz" firstAttribute="top" secondItem="eOi-eT-bWk" secondAttribute="bottom" constant="45" id="MCk-mW-9vX"/>
-                            <constraint firstItem="qY1-tH-zQa" firstAttribute="top" secondItem="75L-bE-dAZ" secondAttribute="top" constant="20" id="SaX-4S-mPr"/>
-                            <constraint firstItem="75L-bE-dAZ" firstAttribute="bottom" secondItem="bua-52-8kz" secondAttribute="bottom" priority="250" constant="41" id="VLg-qh-Nlb"/>
-                            <constraint firstItem="eOi-eT-bWk" firstAttribute="top" secondItem="fFL-5K-Vh7" secondAttribute="bottom" constant="45" id="asY-zb-pP5"/>
-                            <constraint firstItem="eOi-eT-bWk" firstAttribute="top" secondItem="fFL-5K-Vh7" secondAttribute="bottom" constant="45" id="gJN-Fw-9lk"/>
-                            <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" secondItem="fFL-5K-Vh7" secondAttribute="trailing" constant="20" id="gwD-gq-9dX"/>
-                            <constraint firstItem="fFL-5K-Vh7" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" constant="26" id="heq-8k-mIN"/>
-                            <constraint firstItem="eOi-eT-bWk" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" constant="26" id="iXJ-fJ-OrQ"/>
-                            <constraint firstItem="bua-52-8kz" firstAttribute="top" secondItem="eOi-eT-bWk" secondAttribute="bottom" constant="45" id="j9g-eH-PWE"/>
-                            <constraint firstItem="fFL-5K-Vh7" firstAttribute="top" secondItem="PAy-BW-Q8g" secondAttribute="bottom" constant="41" id="kbs-dL-YEC"/>
-                            <constraint firstItem="PAy-BW-Q8g" firstAttribute="top" secondItem="qY1-tH-zQa" secondAttribute="bottom" constant="30" id="khJ-Nb-CNW"/>
-                            <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" secondItem="eOi-eT-bWk" secondAttribute="trailing" constant="20" id="qh9-zu-Pd7"/>
-                            <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qY1-tH-zQa" secondAttribute="trailing" symbolic="YES" id="s3L-lD-OSs"/>
-                            <constraint firstItem="bua-52-8kz" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" constant="26" id="tWR-9E-IXC"/>
-                            <constraint firstItem="qY1-tH-zQa" firstAttribute="leading" secondItem="fFL-5K-Vh7" secondAttribute="leading" id="vfP-6U-vXt"/>
-                            <constraint firstItem="PAy-BW-Q8g" firstAttribute="trailing" secondItem="75L-bE-dAZ" secondAttribute="trailing" id="z2L-w9-hHx"/>
+                            <constraint firstItem="PAy-BW-Q8g" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" id="1TN-yP-Ypv"/>
+                            <constraint firstItem="eOi-eT-bWk" firstAttribute="top" secondItem="fFL-5K-Vh7" secondAttribute="bottom" constant="45" id="3nM-0H-62E"/>
+                            <constraint firstItem="fFL-5K-Vh7" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" constant="26" id="4Gi-7h-II5"/>
+                            <constraint firstItem="fFL-5K-Vh7" firstAttribute="top" secondItem="PAy-BW-Q8g" secondAttribute="bottom" constant="41" id="6M9-Wi-7XR"/>
+                            <constraint firstItem="PAy-BW-Q8g" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" id="82G-4b-sN9"/>
+                            <constraint firstAttribute="bottom" secondItem="PAy-BW-Q8g" secondAttribute="bottom" constant="367" id="EUY-g6-9CS"/>
+                            <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" secondItem="eOi-eT-bWk" secondAttribute="trailing" constant="20" id="F2p-lb-bMf"/>
+                            <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" secondItem="bua-52-8kz" secondAttribute="trailing" constant="20" id="S51-7k-tWa"/>
+                            <constraint firstItem="eOi-eT-bWk" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" constant="26" id="SV2-Zb-kYl"/>
+                            <constraint firstItem="PAy-BW-Q8g" firstAttribute="top" secondItem="oti-OC-XEW" secondAttribute="top" constant="80" id="ZW0-hM-qzp"/>
+                            <constraint firstItem="eOi-eT-bWk" firstAttribute="trailing" secondItem="fFL-5K-Vh7" secondAttribute="trailing" id="aSN-eQ-LdG"/>
+                            <constraint firstItem="bua-52-8kz" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" constant="26" id="byv-W4-Oyl"/>
+                            <constraint firstItem="eOi-eT-bWk" firstAttribute="trailing" secondItem="oti-OC-XEW" secondAttribute="trailingMargin" id="c5Z-o1-g0y"/>
+                            <constraint firstItem="eOi-eT-bWk" firstAttribute="leading" secondItem="qY1-tH-zQa" secondAttribute="leading" id="jS4-qx-NZL"/>
+                            <constraint firstItem="bua-52-8kz" firstAttribute="leading" secondItem="75L-bE-dAZ" secondAttribute="leading" constant="26" id="jh2-Dd-UUm"/>
+                            <constraint firstItem="bua-52-8kz" firstAttribute="top" secondItem="eOi-eT-bWk" secondAttribute="bottom" constant="45" id="lwc-FL-eOp"/>
+                            <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" secondItem="bua-52-8kz" secondAttribute="trailing" constant="20" id="mdR-V9-Tap"/>
+                            <constraint firstItem="PAy-BW-Q8g" firstAttribute="centerX" secondItem="oti-OC-XEW" secondAttribute="centerX" id="quU-4X-pQG"/>
+                            <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" secondItem="fFL-5K-Vh7" secondAttribute="trailing" constant="20" id="rXH-fI-p4Z"/>
+                            <constraint firstItem="75L-bE-dAZ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qY1-tH-zQa" secondAttribute="trailing" symbolic="YES" id="rcR-HP-1cV"/>
+                            <constraint firstAttribute="trailing" secondItem="PAy-BW-Q8g" secondAttribute="trailing" id="s0o-cH-iNe"/>
+                            <constraint firstItem="eOi-eT-bWk" firstAttribute="leading" secondItem="fFL-5K-Vh7" secondAttribute="leading" id="u32-NV-piT"/>
+                            <constraint firstItem="PAy-BW-Q8g" firstAttribute="top" secondItem="qY1-tH-zQa" secondAttribute="bottom" constant="30" id="uKr-A9-rcp"/>
+                            <constraint firstItem="PAy-BW-Q8g" firstAttribute="trailing" secondItem="75L-bE-dAZ" secondAttribute="trailing" id="ykM-hb-saa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="75L-bE-dAZ"/>
-                    </view>
+                    </scrollView>
                     <connections>
                         <outlet property="bookAuthor" destination="eOi-eT-bWk" id="G34-jb-TmG"/>
                         <outlet property="bookDesc" destination="bua-52-8kz" id="0na-8j-Un3"/>
