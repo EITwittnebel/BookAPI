@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:BooksAPI/Data/Book+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:BooksAPI/Data/Book+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:BooksAPI.xcodeproj">
    </FileRef>
    <FileRef

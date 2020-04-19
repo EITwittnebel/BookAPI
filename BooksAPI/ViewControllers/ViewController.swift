@@ -145,39 +145,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     viewModel?.reset()
-    
-    let suffixString = viewModel!.modifySearchInput(searchString: searchBar.searchTextField.text ?? "")
-    let prefixString = "https://www.googleapis.com/books/v1/volumes?q="
-    let jsonURL = URL(string: prefixString + suffixString + "&maxResults=30")
-    
-    let task = URLSession.shared.dataTask(with: jsonURL!, completionHandler: { (data, response, error) in
-      let json: JSON = JSON(data)
-      self.viewModel?.parseJSON(apiResults: json)
-      
-      for index in 0..<self.viewModel!.apiBooksToDisplay.count {
-        let imageURL = self.viewModel!.apiBooksToDisplay[index].thumbnailURL
-        if let theURL = URL(string: imageURL) {
-          
-          var imageTask = URLSession.shared.dataTask(with: theURL, completionHandler: { (data, response, error) in
-            if let imageData = data {
-              self.viewModel!.apiBooksToDisplay[index].image = UIImage(data: imageData)
-            }
-            
-            DispatchQueue.main.async {
-              self.searchTableView.reloadData()
-            }
-          })
-          imageTask.resume()
-        } else {
-          self.viewModel!.apiBooksToDisplay[index].image = UIImage(named: "heart.png")
-        }
-      }
-      
-      DispatchQueue.main.async {
-        self.searchTableView.reloadData()
-      }
-    })
-    task.resume()
+    getJSON(searchString: searchBar.searchTextField.text ?? "", table: self.searchTableView, viewModel: viewModel)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

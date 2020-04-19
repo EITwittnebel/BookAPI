@@ -10,10 +10,9 @@
 		3A1929692448B24E00280A93 /* BooksAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1929682448B24E00280A93 /* BooksAPITests.swift */; };
 		3A1929712448C92700280A93 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1929702448C92700280A93 /* SwiftyJSON.framework */; };
 		3A1929732448C92F00280A93 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1929722448C92F00280A93 /* NVActivityIndicatorView.framework */; };
-		3A3D857F2446518E00F383D6 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D857E2446518E00F383D6 /* heart.png */; };
+		3A37FC6A244BF09900C44F52 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A37FC69244BF09900C44F52 /* NetworkLayer.swift */; };
 		3A3D858B2446615400F383D6 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D85892446615400F383D6 /* Book+CoreDataProperties.swift */; };
 		3A3D858C2446615400F383D6 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D858A2446615400F383D6 /* Book+CoreDataClass.swift */; };
-		3A464B9924476057002F590E /* heart2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A464B9824476057002F590E /* heart2.png */; };
 		3AB841842445418500F91802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB841832445418500F91802 /* AppDelegate.swift */; };
 		3AB841862445418600F91802 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB841852445418600F91802 /* SceneDelegate.swift */; };
 		3AB841882445418600F91802 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB841872445418600F91802 /* ViewController.swift */; };
@@ -45,10 +44,9 @@
 		3A19296A2448B24F00280A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A1929702448C92700280A93 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1929722448C92F00280A93 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A3D857E2446518E00F383D6 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		3A37FC69244BF09900C44F52 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		3A3D85892446615400F383D6 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3A3D858A2446615400F383D6 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3A464B9824476057002F590E /* heart2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart2.png; sourceTree = "<group>"; };
 		3AB841802445418500F91802 /* BooksAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BooksAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB841832445418500F91802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB841852445418600F91802 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,11 +131,10 @@
 				3AD87DD52448912200E7CB8D /* ViewModel */,
 				3A3D8580244660CE00F383D6 /* Model */,
 				3AB841832445418500F91802 /* AppDelegate.swift */,
+				3A37FC69244BF09900C44F52 /* NetworkLayer.swift */,
 				3AB841852445418600F91802 /* SceneDelegate.swift */,
 				3AB841892445418600F91802 /* Main.storyboard */,
 				3AB8418F2445418900F91802 /* Assets.xcassets */,
-				3A3D857E2446518E00F383D6 /* heart.png */,
-				3A464B9824476057002F590E /* heart2.png */,
 				3AB841912445418900F91802 /* LaunchScreen.storyboard */,
 				3AB841942445418900F91802 /* Info.plist */,
 				3AB8418C2445418600F91802 /* BooksAPI.xcdatamodeld */,
@@ -274,9 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB841932445418900F91802 /* LaunchScreen.storyboard in Resources */,
-				3A464B9924476057002F590E /* heart2.png in Resources */,
 				3AB841902445418900F91802 /* Assets.xcassets in Resources */,
-				3A3D857F2446518E00F383D6 /* heart.png in Resources */,
 				3AB8418B2445418600F91802 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +355,7 @@
 				3AB841C6244609B000F91802 /* BookData.swift in Sources */,
 				3A3D858B2446615400F383D6 /* Book+CoreDataProperties.swift in Sources */,
 				3AB841882445418600F91802 /* ViewController.swift in Sources */,
+				3A37FC6A244BF09900C44F52 /* NetworkLayer.swift in Sources */,
 				3AB8418E2445418600F91802 /* BooksAPI.xcdatamodeld in Sources */,
 				3AB841842445418500F91802 /* AppDelegate.swift in Sources */,
 				3AB841862445418600F91802 /* SceneDelegate.swift in Sources */,
